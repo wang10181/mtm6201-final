@@ -1,0 +1,784 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*******************This is my css part for navgation *******************************/
+/* ************************************************************************************* */
+/* Global Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+
+.container{
+  width: 95%;
+}
+
+header {
+	background-color: rgb(171, 68, 29);
+	padding: 10px 0; 
+  }
+  
+  .navbar {
+	display: flex; 
+	justify-content: space-evenly; 
+	align-items: center; 
+	width: 100%; 
+	margin: 0 auto;
+  }
+  
+  .navbar ul {
+	list-style: none;
+	display: flex; 
+	justify-content: space-evenly; 
+	align-items: center; 
+	width: 100%; 
+	padding: 0;
+	margin: 0;
+  }
+  
+  .navbar ul li {
+	text-align: center;
+  }
+  
+  .navbar ul li a {
+	text-decoration: none;
+	color: rgb(160, 156, 171);
+	font-weight: bold;
+  font-size: larger;
+  }
+  
+  .search-bar {
+	margin-top: 18px;
+	margin-left: 10px;
+	margin-right: 10px;
+  }
+  
+  .search-bar input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  main {
+	padding: 10px;
+  }
+  
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.home-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.login-btn {
+  background-color: rgb(171, 68, 29);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  padding-right: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: larger;
+  
+}
+.login-btn:hover {
+  background-color: black;}
+
+.home-icon h1{
+  
+  padding-top: 15px;
+  padding-left: 55px;
+
+}
+.photo-album h2 {
+  margin-bottom: 20px;
+   
+  font-weight: bold;padding-left: 15px;
+  
+}
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: 1fr 1fr; 
+  grid-template-areas: 
+    "b1 b2"
+    "b3 b3"; 
+  gap: 10px; 
+}
+
+.album-grid img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.album-grid img {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; 
+}
+
+.album-grid img:hover {
+  transform: scale(1.1); 
+  opacity: 0.7; 
+}
+
+.album-grid img:hover {
+  opacity: 1; 
+}
+
+.album-grid > :nth-child(1) {
+  grid-area: b1; 
+}
+
+.album-grid > :nth-child(2) {
+  grid-area: b2; 
+}
+
+.album-grid > :nth-child(3) {
+  grid-area: b3; 
+}
+
+
+
+.company-intro {
+  margin-top: 20px;
+}
+
+
+
+.company-intro button {
+  background-color: rgb(171, 68, 29);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.company-intro button:hover {
+  background-color: black;}
+
+.company-intro h2{
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+.company-intro p{
+  padding-bottom: 25px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  
+  margin-top: 20px;
+}
+
+
+
+/* design a min-width media query for the screen size of 768px and above for the home page */
+
+@media screen and (min-width: 768px){
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+      "b1 b3"
+      "b2 b3"; 
+    gap: 10px; 
+  }
+  .company-intro p{
+    padding-bottom: 20px;
+    
+    font-size: 18px;
+  }
+}
+/* design a min-width media query for the screen size of 1100px and above for the home page */
+@media screen and (min-width: 1100px){
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+      "b1 b1"
+      "b2 b3"; 
+    gap: 10px; 
+  }
+  .company-intro p{
+    padding-bottom: 20px;
+    
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+/* ************************************About Us ************************************Page*********************************************** */
+/* ************************************************************************************************************************************************ */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.our1{
+  text-align: left;
+  padding-top: 35px;
+}
+
+.employee {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  
+  overflow: hidden; /* Ensures container expands around floated content */
+}
+
+.employee img {
+  max-width: 150px; /* Adjust image size as needed */
+  border-radius: 1px;
+  float: left;
+  margin-right: 20px; /* Adds spacing between image and text */
+  transition: transform 0.3s ease-in-out;
+}
+.employee img:hover {
+  transform: scale(1.2); 
+  animation: bounce 0.4s ease-in-out; 
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1.2) translateY(0); 
+  }
+  50% {
+    transform: scale(1.2) translateY(-10px); 
+  }
+}
+
+.employee h2 {
+  margin-top: 0; /* Aligns text closer to the top */
+  color: black;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: bold;
+  
+}
+
+.employee p {
+  color:rgb(160, 156, 171);
+  font-size: 12px;
+}
+
+.mission h2 {
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+.mission p {
+  color:rgb(160, 156, 171);
+  font-size: 12px;
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: 4px 20px;
+  margin-top: 10px;
+  background-color: rgb(171, 68, 29);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 15px;
+}
+.button:hover {
+  background-color: black;
+}
+
+/* design a min-width media query for the screen size of 768px and above for the About us page */
+
+@media screen and (min-width: 768px){
+  .employee img{
+    float: right;
+  }
+  
+.employee h2 {
+  margin-top: 0; /* Aligns text closer to the top */
+  color: black;
+  font-size: 18px;
+  
+  font-weight: bold;
+  
+}
+
+.employee p {
+  color:rgb(160, 156, 171);
+  font-size: 16px;
+  text-align: left;
+}
+
+.mission h2 {
+  color: black;
+  font-size: 22px;
+  padding: 10px;
+  font-weight: bold;
+}
+.mission p {
+  color:rgb(160, 156, 171);
+  font-size: 16px;
+}
+
+
+}
+
+/* design a min-width media query for the screen size of 1100px and above for the About us page */
+@media screen and (min-width: 1100px) {
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  .our1{
+    text-align: left;
+    padding-top: 35px;
+  }
+  
+  .employee {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    overflow: hidden; /* Ensures container expands around floated content */
+  }
+  
+  .employee img {
+    max-width: 150px; /* Adjust image size as needed */
+    border-radius: 1px;
+    float: left;
+    margin-right: 20px; /* Adds spacing between image and text */
+    transition: transform 0.3s ease-in-out;
+  }
+  .employee img:hover {
+    transform: scale(1.2); 
+    animation: bounce 0.4s ease-in-out; 
+  }
+  
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1.2) translateY(0); 
+    }
+    50% {
+      transform: scale(1.2) translateY(-10px); 
+    }
+  }
+  
+  .employee h2 {
+    margin-top: 0; /* Aligns text closer to the top */
+    color: black;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: bold;
+    
+  }
+  
+  .employee p {
+    color:rgb(160, 156, 171);
+    font-size: 12px;
+  }
+  
+  .mission h2 {
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .mission p {
+    color:rgb(160, 156, 171);
+    font-size: 12px;
+  }
+  
+  
+  
+  .button {
+    display: inline-block;
+    padding: 4px 20px;
+    margin-top: 10px;
+    background-color: rgb(171, 68, 29);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+  }
+  .button:hover {
+    background-color: black;
+  }
+
+  .employee3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px; 
+  }
+
+  .employee3 > :nth-child(1) {
+    
+    grid-column: 1/2; 
+    grid-row: 1/3;
+    align-self: center; 
+    justify-self: center;
+  }
+
+  .employee3 > :nth-child(2) {
+    grid-column: 2/3; 
+    grid-row: 1/2; 
+  }
+
+  .employee3 > :nth-child(3) {
+    grid-column: 2/3; 
+    grid-row: 2/3; 
+  }
+
+  
+  .employee {
+    padding: 20px;
+  
+  }
+
+
+  .employee3 img > :nth-child(1){
+    height: 400px;
+  }
+
+
+  .employee3 > :nth-child(1) img {
+    max-height: none; 
+    height: 290px; 
+    display: block; 
+  }
+
+  .employee3 > :nth-child(1) h2 {
+    font-size: 1.4rem; /* 标题字体放大 1.5 倍 */
+    font-weight: bold;
+  }
+
+  .employee3 > :nth-child(1) p {
+    font-size: 1.2rem; /* 正文字体放大 1.5 倍 */
+    color: rgb(160, 156, 171);
+    
+  }
+
+
+
+
+
+}
+
+
+
+ 
+
+  
+
+  
+
+
+
+/* ************************************Contact Page************************************Page***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** */
+/* General Styles */
+
+main p{
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-top: 30px;
+  
+}
+main h1{
+  padding-top: 35px;
+}
+main h1 img{
+  float: left;
+  padding-right: 70px;
+}
+/* Employees Section */
+.employeesc {
+  display: flex; /* 改为 flex 布局 */
+  flex-direction: row; /* 设置为垂直分布 */
+  gap: 20px; /* 元素之间的间距 */
+  padding: 20px;
+}
+
+.employeec {
+  text-align: center;
+  padding: 30px;
+  
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.employeec img {
+  width: 100%;
+  border-radius: 2px;
+  transition: transform 0.6s ease-in-out;
+  padding: 20px;
+}
+.employeec img:hover {
+  transform: scale(1.4) rotate(360deg);
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg); 
+  }
+  100% {
+    transform: scale(1.4) rotate(360deg);
+  }
+}
+
+.employeec img:hover {
+  animation: spin 0.6s ease-in-out; 
+}
+
+.employeec h3 {
+  margin: 10px 0;
+  color: rgb(160, 156, 171);
+  padding: 10px;
+}
+
+.employeec button {
+  background-color: rgb(171, 68, 29);
+  color: #fff;
+  border: none;
+  padding: 5px 24px;
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+
+.employeec button:hover {
+  background-color: black;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex; /* 改为 flex 布局 */
+  flex-direction: column; /* 设置为垂直分布 */
+  gap: 20px; /* 元素之间的间距 */
+  padding: 20px;
+}
+
+.contact-form{
+  padding: 20px;
+  border: 1px solid rgb(171, 68, 29);
+  border-radius: 2px;
+}
+
+.contact-form h2, .map h2 {
+  margin-bottom: 20px;
+  color: #333;
+  padding: 15px;
+}
+section h2{
+  padding: 10px;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(171, 68, 29);
+  border-radius: 2px;
+}
+
+.contact-form button {
+  background-color: rgb(171, 68, 29);
+  color: #fff;
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  
+}
+.contact-form button {
+  display: block;
+  margin: 0 auto; 
+}
+
+.contact-form button:hover {
+  background-color: black;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px; 
+  
+}
+.map{
+ 
+  border: 1px solid rgb(171, 68, 29);
+  border-radius: 2px;
+}
+/* design a min-width media query for the screen size of 768px and above for the Contact page */
+
+@media screen and (min-width: 768px){
+  .employeesc {
+    display: flex; 
+    flex-direction: column;}
+  .employeec button {
+      background-color: rgb(171, 68, 29);
+      color: #fff;
+      border: none;
+      padding: 15px 24px;
+      cursor: pointer;
+      border-radius: 12px;
+      
+    } 
+
+    .employeec img {
+      width: 100%;
+      border-radius: 2px;
+      padding: 30px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .employeec img:hover {
+      transform: scale(1.1) rotate(360deg);
+    }
+    
+    
+    
+    @keyframes spin {
+      0% {
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.05) rotate(180deg); 
+      }
+      100% {
+        transform: scale(1.1) rotate(360deg);
+      }
+    }
+    
+    .employeec img:hover {
+      animation: spin 0.6s ease-in-out; 
+    }
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; 
+      gap: 20px; 
+    }
+    
+    .contact-form {
+      flex: 1; 
+      max-width: 45%; 
+    }
+    
+    .contact-map {
+      flex: 1; 
+      max-width: 45%; 
+    }
+    
+    iframe {
+      width: 100%; 
+      
+    }
+    
+    .contact-section h2 {
+      margin-bottom: 10px;
+    }
+
+  
+
+
+}
+
+/* design a min-width media query for the screen size of 768px and above for the Contact page */
+
+@media screen and (min-width: 1100px){
+  .employeesc {
+    display: flex; 
+    flex-direction: row;}
+
+  
+}
+
+
